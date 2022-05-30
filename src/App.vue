@@ -1,7 +1,9 @@
 <template>
-  <header></header>
+  <div class="bg-gray-1000">
+    <header></header>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <script>

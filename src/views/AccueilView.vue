@@ -2,7 +2,6 @@
   <Header />
   <main>
     <h1 class="text-2xl">Electronic Palace Festival</h1>
-    <bouton>Découvrir</bouton>
   </main>
 </template>
 
