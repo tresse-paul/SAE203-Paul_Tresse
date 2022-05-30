@@ -1,6 +1,6 @@
 <template>
   <figure class="group relative h-64 w-auto">
-    <img :src="image" alt="Portrait de l'artiste Qrion" class="h-64 w-full rounded-lg object-cover" />
+    <img :src="image" class="h-64 w-full rounded-lg object-cover" />
     <figcaption
       class="
         absolute
@@ -11,7 +11,7 @@
         w-full
         items-end
         justify-between
-        bg-shadow-card
+        bg-shadow-card-bot
         p-4
         opacity-0
         transition-opacity

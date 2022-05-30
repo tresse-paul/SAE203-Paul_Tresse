@@ -7,12 +7,36 @@
         Laissez-vous emporter par les artistes <strong>les plus prometteurs</strong> venus des quatre coins du globe.
       </p>
       <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-        <ArtisteCard nom="Qrion" image="../../src/assets/Qrion.jpeg" date="Vendredi 5 août 2022" />
-        <ArtisteCard nom="Madeon" image="../../src/assets/Madeon.jpeg" date="Samedi 6 août 2022" />
-        <ArtisteCard nom="Sarah Landry" image="../../src/assets/Sarah_Landry.jpeg" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" image="/src/assets/Qrion.jpeg" date="Vendredi 5 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" image="/src/assets/Madeon.jpeg" date="Samedi 6 août 2022" />
+        <ArtisteCard
+          alt="Portrait de l'artiste Sarah Landry"
+          nom="Sarah Landry"
+          image="/src/assets/Sarah_Landry.jpeg"
+          date="Dimanche 7 août 2022"
+        />
       </div>
       <div class="flex justify-center">
         <bouton principal>Voir plus</bouton>
+      </div>
+    </div>
+    <div class="mb-32 flex flex-col gap-7">
+      <h2 class="flex justify-center font-work-sans text-5xl font-bold uppercase text-gray-50">Le festival</h2>
+      <figure class="relative">
+        <img
+          src="../assets/Palais_des_papes.jpg"
+          alt="Photo de l'intérieur du Palais des Papes à Avignon"
+          class="h-80 w-full object-cover"
+        />
+        <figcaption class="absolute top-0 left-0 h-80 w-full bg-shadow-card-top p-5">
+          <p class="font-barlow text-gray-50 lg:text-xl">
+            <strong>Electronic Palace Festival</strong> garantie un week-end rententissant en vous transportant dans un univers à couper le
+            souffle à l’intérieur du Palais des Papes d’Avignon.
+          </p>
+        </figcaption>
+      </figure>
+      <div class="flex justify-center">
+        <bouton principal>Plus d'infos</bouton>
       </div>
     </div>
   </main>
