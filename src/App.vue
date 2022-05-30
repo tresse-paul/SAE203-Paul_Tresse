@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-gray-1000">
+  <header>
+    <Entete> <RouterLink to="/programmation"></RouterLink></Entete>
+  </header>
+  <div>
     <header></header>
 
     <RouterView />
@@ -7,5 +10,8 @@
 </template>
 
 <script>
-export default {};
+import Entete from "./components/Entete.vue";
+export default {
+  components: { Entete },
+};
 </script>
