@@ -1,10 +1,16 @@
 <template>
+  <Header />
   <main>
     <h1 class="text-2xl">Electronic Palace Festival</h1>
-    <div class="h-10 w-10 bg-shadow-card"></div>
+    <bouton>Découvrir</bouton>
   </main>
 </template>
 
 <script>
-export default {};
+import Header from "../components/Header.vue";
+import bouton from "../components/bouton.vue";
+
+export default {
+  components: { Header, bouton },
+};
 </script>
