@@ -2,8 +2,8 @@
   <main>
     <Hero />
     <div class="mb-32 flex flex-col gap-7 px-5">
-      <h2 class="flex justify-center font-work-sans text-5xl font-bold uppercase text-gray-50">Les artistes</h2>
-      <p class="font-barlow text-gray-50 lg:text-xl">
+      <h2 class="flex justify-center text-center font-work-sans text-5xl font-bold uppercase text-gray-50">Les artistes</h2>
+      <p class="text-center font-barlow text-gray-50 lg:text-xl">
         Laissez-vous emporter par les artistes <strong>les plus prometteurs</strong> venus des quatre coins du globe.
       </p>
       <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="mb-32 flex flex-col gap-7">
-      <h2 class="flex justify-center font-work-sans text-5xl font-bold uppercase text-gray-50">Le festival</h2>
+      <h2 class="flex justify-center text-center font-work-sans text-5xl font-bold uppercase text-gray-50">Le festival</h2>
       <figure class="relative">
         <img
           src="../assets/Palais_des_papes.jpg"
@@ -29,7 +29,7 @@
           class="h-80 w-full object-cover"
         />
         <figcaption class="absolute top-0 left-0 h-80 w-full bg-shadow-card-top p-5">
-          <p class="font-barlow text-gray-50 lg:text-xl">
+          <p class="text-center font-barlow text-gray-50 lg:text-xl">
             <strong>Electronic Palace Festival</strong> garantie un week-end rententissant en vous transportant dans un univers à couper le
             souffle à l’intérieur du Palais des Papes d’Avignon.
           </p>
@@ -40,8 +40,8 @@
       </div>
     </div>
     <div class="mb-32 flex flex-col gap-7 px-5">
-      <h2 class="flex justify-center font-work-sans text-5xl font-bold uppercase text-gray-50">Des questions</h2>
-      <p class="font-barlow text-gray-50 lg:text-xl">
+      <h2 class="flex justify-center text-center font-work-sans text-5xl font-bold uppercase text-gray-50">Des questions</h2>
+      <p class="text-center font-barlow text-gray-50 lg:text-xl">
         Pour <strong>en savoir plus</strong> sur le festival, sur les artistes ou bien d’autres choses, contactez-nous via notre formulaire
         de contact. Abonnez-vous à notre newsletter pour ne rien rater de l’évènement.
       </p>
