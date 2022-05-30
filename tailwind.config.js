@@ -19,7 +19,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        'shadow-card': "linear-gradient(to bottom, rgba(0,0,0,0) 39.06%, rgba(15,15,15,0.8) 100%)",
+        'shadow-card': "linear-gradient(to top, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0) 100%)",
         'hero-bg': "url('/src/assets/antoine-j-ZiMtckU0rug-unsplash.jpg')",
       },
 

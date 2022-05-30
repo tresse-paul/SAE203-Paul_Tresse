@@ -1,10 +1,10 @@
 <template>
   <footer class="bg-red-500">
     <div class="flex flex-col gap-8 p-5 lg:flex-row">
-      <div class="flex items-start">
+      <RouterLink to="/" class="flex items-start">
         <LogoMobile class="fill-gray—1000" />
         <p class="font-work-sans text-5xl font-bold uppercase">epf</p>
-      </div>
+      </RouterLink>
       <div class="relative flex gap-8 lg:left-1/4">
         <div class="flex flex-col gap-12">
           <div class="flex flex-col gap-3">

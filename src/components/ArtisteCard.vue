@@ -1,15 +1,33 @@
 <template>
-  <figure class="relative h-64 w-auto">
-    <img :src="image" alt="Portrait de l'artiste Qrion" class="h-64 w-full rounded-lg bg-shadow-card object-cover" />
-    <figcaption class="absolute bottom-4 left-4 flex h-auto items-end justify-between">
+  <figure class="group relative h-64 w-auto">
+    <img :src="image" alt="Portrait de l'artiste Qrion" class="h-64 w-full rounded-lg object-cover" />
+    <figcaption
+      class="
+        absolute
+        bottom-0
+        left-0
+        flex
+        h-full
+        w-full
+        items-end
+        justify-between
+        bg-shadow-card
+        p-4
+        opacity-0
+        transition-opacity
+        duration-300
+        ease-out
+        group-hover:opacity-100
+      "
+    >
       <div class="flex flex-col gap-1">
         <h3 class="font-work-sans text-2xl font-bold uppercase text-gray-50">{{ nom }}</h3>
         <p class="font-barlow text-xl text-gray-400">{{ date }}</p>
       </div>
+      <div class="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 p-1.5">
+        <Eye />
+      </div>
     </figcaption>
-    <div class="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 p-1.5">
-      <Eye />
-    </div>
   </figure>
 </template>
 
