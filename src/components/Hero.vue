@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-10">
+  <div class="mb-10 flex flex-col gap-10">
     <div class="flex h-60 w-screen items-center bg-hero-bg bg-cover pl-5 md:h-96">
       <div class="flex flex-col gap-2">
         <h1 class="font-work-sans text-5xl font-bold uppercase text-gray-50 xl:text-6xl">Electronic</h1>
