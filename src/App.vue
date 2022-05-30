@@ -1,9 +1,8 @@
 <template>
-  <header>
-    <Entete />
-  </header>
-  <div>
-    <header></header>
+  <div class="bg-gray-1000">
+    <header>
+      <Entete />
+    </header>
 
     <RouterView />
   </div>
