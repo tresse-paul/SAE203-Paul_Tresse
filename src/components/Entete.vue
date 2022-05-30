@@ -1,11 +1,11 @@
 <template>
   <nav class="flex h-16 w-screen items-center justify-between bg-gray-1000 px-5 xl:hidden">
-    <RouterLink to="/"><LogoMobile class="bg-gray-50" /></RouterLink>
-    <NavBouton class="bg-gray-50" />
+    <RouterLink to="/"><LogoMobile class="fill-gray-50" /></RouterLink>
+    <NavBouton class="fill-gray-50" />
   </nav>
 
   <nav class="hidden h-32 w-screen items-center justify-between bg-gray-1000 px-12 xl:flex">
-    <RouterLink to="/"><LogoDefault class="bg-gray-50" /></RouterLink>
+    <RouterLink to="/"><LogoDefault class="fill-gray-50" /></RouterLink>
     <div class="flex gap-12">
       <RouterLink to="/programmation" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Programmation</RouterLink>
       <RouterLink to="/artistes" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Les artistes</RouterLink>
