@@ -7,9 +7,9 @@
         <h1 class="font-work-sans text-5xl font-bold uppercase text-gray-50 xl:text-6xl">Festival</h1>
       </div>
     </div>
-    <div class="flex flex-col items-center gap-2">
+    <div class="flex flex-col items-center gap-8">
       <p class="text-xl font-bold uppercase text-gray-50">5 - 7 août 2022</p>
-      <span class="h-0.5 w-20 bg-red-500"></span>
+      <span class="h-0.5 w-60 bg-red-500"></span>
     </div>
   </div>
 </template>
