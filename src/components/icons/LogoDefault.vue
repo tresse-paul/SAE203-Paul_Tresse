@@ -3,7 +3,7 @@
     width="200"
     height="113"
     viewBox="0 0 200 113"
-    fill="none"
+    fill=""
     xmlns="http://www.w3.org/2000/svg"
     class="relative h-[112.7px] w-[200px]"
     preserveAspectRatio="xMidYMid meet"
