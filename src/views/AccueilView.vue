@@ -39,6 +39,16 @@
         <bouton principal>Plus d'infos</bouton>
       </div>
     </div>
+    <div class="mb-32 flex flex-col gap-7 px-5">
+      <h2 class="flex justify-center font-work-sans text-5xl font-bold uppercase text-gray-50">Des questions</h2>
+      <p class="font-barlow text-gray-50 lg:text-xl">
+        Pour <strong>en savoir plus</strong> sur le festival, sur les artistes ou bien d’autres choses, contactez-nous via notre formulaire
+        de contact. Abonnez-vous à notre newsletter pour ne rien rater de l’évènement.
+      </p>
+      <div class="flex justify-center">
+        <bouton principal>Contacter</bouton>
+      </div>
+    </div>
   </main>
   <Pieds />
 </template>
