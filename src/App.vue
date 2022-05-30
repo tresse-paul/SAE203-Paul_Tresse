@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Entete> <RouterLink to="/programmation"></RouterLink></Entete>
+    <Entete />
   </header>
   <div>
     <header></header>

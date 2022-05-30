@@ -1,26 +1,26 @@
 <template>
-  <div class="flex h-16 w-full items-center justify-between bg-gray-1000 px-5 xl:hidden">
-    <LogoMobile class="bg-gray-50" />
-  </div>
+  <nav class="flex h-16 w-screen items-center justify-between bg-gray-1000 px-5 xl:hidden">
+    <RouterLink to="/"><LogoMobile class="bg-gray-50" /></RouterLink>
+    <NavBouton class="bg-gray-50" />
+  </nav>
 
-  <div class="hidden h-32 w-full items-center bg-gray-1000 xl:flex">
-    <LogoDefault class="fill-gray-50" />
-    <ul>
-      <nav class="flex gap-12">
-        <li class="font-work-sans text-2xl font-bold text-gray-50">PROGRAMMATION</li>
-        <li class="font-work-sans text-2xl font-bold text-gray-50">ARTISTES</li>
-        <li class="font-work-sans text-2xl font-bold text-gray-50">LE FESTIVAL</li>
-        <li class="font-work-sans text-2xl font-bold text-gray-50">CONTACT</li>
-      </nav>
-    </ul>
-  </div>
+  <nav class="hidden h-32 w-screen items-center justify-between bg-gray-1000 px-12 xl:flex">
+    <RouterLink to="/"><LogoDefault class="bg-gray-50" /></RouterLink>
+    <div class="flex gap-12">
+      <RouterLink to="/programmation" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Programmation</RouterLink>
+      <RouterLink to="/artistes" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Les artistes</RouterLink>
+      <RouterLink to="festival" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Le festival</RouterLink>
+      <RouterLink to="contact" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Contact</RouterLink>
+    </div>
+  </nav>
 </template>
 
 <script>
 import LogoMobile from "./icons/LogoMobile.vue";
 import LogoDefault from "./icons/LogoDefault.vue";
+import NavBouton from "./icons/NavBouton.vue";
 
 export default {
-  components: { LogoMobile, LogoDefault },
+  components: { LogoMobile, LogoDefault, NavBouton },
 };
 </script>
