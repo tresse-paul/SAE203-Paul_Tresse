@@ -35,22 +35,32 @@ import HeroSec from "../components/HeroSec.vue";
 import ArtisteCard from "../components/ArtisteCard.vue";
 import Pieds from "../components/Pieds.vue";
 import CarouselFestival from "../components/CarouselFestival.vue";
+import CarouselImg1 from "../assets/pont.jpg";
+import CarouselImg2 from "../assets/freedommoment.jpg";
+import CarouselImg3 from "../assets/Madeon_djset.jpg";
+import CarouselImg4 from "../assets/Women_crowd.jpg";
+import CarouselImg5 from "../assets/Roof.jpg";
+import CarouselImg6 from "../assets/Dj.jpg";
+import CarouselImg7 from "../assets/Crowd.jpg";
+import CarouselImg8 from "../assets/corridor.jpg";
+import CarouselImg9 from "../assets/Mousse.jpg";
+import CarouselImg10 from "../assets/Man_crowd.jpg";
 import { defineComponent, ref } from "vue";
 
 export default {
   components: { HeroSec, ArtisteCard, Pieds, CarouselFestival },
   setup() {
     const _images = [
-      { id: 1, url: "/src/assets/pont.jpg" },
-      { id: 2, url: "/src/assets/freedommoment.jpg" },
-      { id: 3, url: "/src/assets/Madeon_djset.jpg" },
-      { id: 4, url: "/src/assets/Women_crowd.jpg" },
-      { id: 5, url: "/src/assets/Roof.jpg" },
-      { id: 6, url: "/src/assets/Dj.jpg" },
-      { id: 7, url: "/src/assets/Crowd.jpg" },
-      { id: 8, url: "/src/assets/corridor.jpg" },
-      { id: 9, url: "/src/assets/Mousse.jpg" },
-      { id: 10, url: "/src/assets/Man_crowd.jpg" },
+      { id: 1, url: CarouselImg1 },
+      { id: 2, url: CarouselImg2 },
+      { id: 3, url: CarouselImg3 },
+      { id: 4, url: CarouselImg4 },
+      { id: 5, url: CarouselImg5 },
+      { id: 6, url: CarouselImg6 },
+      { id: 7, url: CarouselImg7 },
+      { id: 8, url: CarouselImg8 },
+      { id: 9, url: CarouselImg9 },
+      { id: 10, url: CarouselImg10 },
     ];
     const images = ref(_images);
     const handelDeleteImage = (index, number) => images.value.splice(index, 1);
