@@ -25,7 +25,7 @@
         <div class="absolute left-1/2 flex flex-col gap-3 lg:relative lg:right-1/2">
           <h4 class="font-barlow text-xl font-bold uppercase">Légale</h4>
           <nav>
-            <RouterLink class="font-barlow" to="/mentions">Mentions légales</RouterLink>
+            <RouterLink class="font-barlow" to="/legale">Mentions légales</RouterLink>
           </nav>
         </div>
       </div>
