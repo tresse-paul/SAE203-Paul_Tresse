@@ -7,10 +7,10 @@
   <nav class="hidden h-32 w-screen items-center justify-between bg-gray-1000 px-12 xl:flex">
     <RouterLink to="/"><LogoDefault class="fill-gray-50" /></RouterLink>
     <div class="flex gap-12">
-      <RouterLink to="/programmation" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Programmation</RouterLink>
-      <RouterLink to="/artistes" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Les artistes</RouterLink>
-      <RouterLink to="festival" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Le festival</RouterLink>
-      <RouterLink to="contact" class="font-work-sans text-2xl font-bold uppercase text-gray-50">Contact</RouterLink>
+      <RouterLink to="/programmation" class="font-work-sans text-xl font-bold uppercase text-gray-50">Programmation</RouterLink>
+      <RouterLink to="/artistes" class="font-work-sans text-xl font-bold uppercase text-gray-50">Les artistes</RouterLink>
+      <RouterLink to="festival" class="font-work-sans text-xl font-bold uppercase text-gray-50">Le festival</RouterLink>
+      <RouterLink to="contact" class="font-work-sans text-xl font-bold uppercase text-gray-50">Contact</RouterLink>
     </div>
   </nav>
 </template>
