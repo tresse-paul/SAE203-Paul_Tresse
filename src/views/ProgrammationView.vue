@@ -8,7 +8,7 @@
         </h2>
       </div>
       <img
-        src="../../public/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg"
+        src="../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg"
         alt="Photo d'un dj sur des platines"
         class="h-72 w-screen object-cover md:h-96"
       />
@@ -28,7 +28,7 @@
         </h2>
       </div>
       <img
-        src="../../public/danny-howe-bn-D2bCvpik-unsplash.jpg"
+        src="../assets/danny-howe-bn-D2bCvpik-unsplash.jpg"
         alt="Photo d'un dj sur des platines"
         class="h-72 w-screen object-cover md:h-96"
       />
@@ -48,7 +48,7 @@
         </h2>
       </div>
       <img
-        src="../../public/antoine-j-A_0C42zmz1Q-unsplash.jpg"
+        src="../assets/antoine-j-A_0C42zmz1Q-unsplash.jpg"
         alt="Photo d'un dj sur des platines"
         class="h-72 w-screen object-cover md:h-96"
       />

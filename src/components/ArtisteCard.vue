@@ -13,11 +13,10 @@
         justify-between
         bg-shadow-card-bot
         p-4
-        opacity-0
         transition-opacity
         duration-300
         ease-out
-        group-hover:opacity-100
+        md:opacity-0 md:group-hover:opacity-100
       "
     >
       <div class="flex flex-col gap-1">

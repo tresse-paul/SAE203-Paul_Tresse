@@ -72,6 +72,9 @@ import CarouselHome from "../components/CarouselHome.vue";
 import imageQrion from "../assets/Qrion.jpeg?url";
 import imageMadeon from "../assets/Madeon.jpeg?url";
 import imageSarah_Landry from "../assets/Sarah_Landry.jpeg?url";
+import CarouselHouse from "../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
+import CarouselEdm from "../assets/danny-howe-bn-D2bCvpik-unsplash.jpg";
+import CarouselTrance from "../assets/antoine-j-A_0C42zmz1Q-unsplash.jpg";
 import { defineComponent, ref } from "vue";
 
 export default {
@@ -80,14 +83,17 @@ export default {
       imageQrion,
       imageMadeon,
       imageSarah_Landry,
+      CarouselHouse,
+      CarouselEdm,
+      CarouselTrance,
     };
   },
   components: { Hero, Pieds, ArtisteCard, bouton, CarouselHome },
   setup() {
     const _images = [
-      { id: 1, url: "../../public/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" },
-      { id: 2, url: "../../public/danny-howe-bn-D2bCvpik-unsplash.jpg" },
-      { id: 3, url: "../../public/antoine-j-A_0C42zmz1Q-unsplash.jpg" },
+      { id: 1, url: CarouselHouse },
+      { id: 2, url: CarouselEdm },
+      { id: 3, url: CarouselTrance },
     ];
     const images = ref(_images);
     const handelDeleteImage = (index, number) => images.value.splice(index, 1);
