@@ -11,6 +11,10 @@ module.exports = {
         },
       },
 
+      height: {
+        '600': '37.5rem',
+      },
+
       screens: {
         'xl': '1440px',
         // => @media (min-width: 1440px)

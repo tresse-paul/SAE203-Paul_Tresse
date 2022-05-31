@@ -2,16 +2,16 @@
   <main>
     <Hero />
     <div class="xl:px-32">
-      <div class="mb-32 flex flex-col gap-7 px-5">
-        <h2 class="flex justify-center text-center font-work-sans text-3xl font-bold uppercase text-gray-50 md:text-5xl">
+      <div class="mb-32 flex flex-col gap-7">
+        <h2 class="flex justify-center px-5 text-center font-work-sans text-3xl font-bold uppercase text-gray-50 md:text-5xl">
           La programmation
         </h2>
-        <p class="text-center font-barlow text-gray-50 lg:text-xl">
+        <p class="px-5 text-center font-barlow text-gray-50 lg:text-xl">
           <strong>3 soirées, 3 ambiances</strong> électroniques. Vibrez au cœur d’Avignon avec les étoiles montantes des scènes House, EDM
           et Trance Music.
         </p>
-        <CarouselHome />
-        <div class="flex justify-center">
+        <CarouselHome :images="images" @deleteImage="handelDeleteImage" />
+        <div class="flex justify-center px-5">
           <RouterLink to="/programmation"><bouton principal>Découvrir</bouton></RouterLink>
         </div>
       </div>
@@ -72,6 +72,7 @@ import CarouselHome from "../components/CarouselHome.vue";
 import imageQrion from "../assets/Qrion.jpeg?url";
 import imageMadeon from "../assets/Madeon.jpeg?url";
 import imageSarah_Landry from "../assets/Sarah_Landry.jpeg?url";
+import { defineComponent, ref } from "vue";
 
 export default {
   data: function () {
@@ -82,5 +83,16 @@ export default {
     };
   },
   components: { Hero, Pieds, ArtisteCard, bouton, CarouselHome },
+  setup() {
+    const _images = [
+      { id: 1, url: "../../public/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" },
+      { id: 2, url: "../../public/danny-howe-bn-D2bCvpik-unsplash.jpg" },
+      { id: 3, url: "../../public/antoine-j-A_0C42zmz1Q-unsplash.jpg" },
+    ];
+    const images = ref(_images);
+    const handelDeleteImage = (index, number) => images.value.splice(index, 1);
+
+    return { handelDeleteImage, images };
+  },
 };
 </script>

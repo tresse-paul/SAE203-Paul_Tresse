@@ -9,7 +9,8 @@
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",

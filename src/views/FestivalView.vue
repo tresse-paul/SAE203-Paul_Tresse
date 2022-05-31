@@ -24,6 +24,7 @@
         <h2 class="relative z-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">Gallerie</h2>
       </div>
       <p class="px-5 font-barlow text-gray-50 lg:text-xl">Plongez-vous au cœur du festival avec nos dernières photos.</p>
+      <CarouselFestival :images="images" @deleteImage="handelDeleteImage" />
     </div>
   </div>
   <Pieds />
@@ -33,8 +34,28 @@
 import HeroSec from "../components/HeroSec.vue";
 import ArtisteCard from "../components/ArtisteCard.vue";
 import Pieds from "../components/Pieds.vue";
+import CarouselFestival from "../components/CarouselFestival.vue";
+import { defineComponent, ref } from "vue";
 
 export default {
-  components: { HeroSec, ArtisteCard, Pieds },
+  components: { HeroSec, ArtisteCard, Pieds, CarouselFestival },
+  setup() {
+    const _images = [
+      { id: 1, url: "/src/assets/pont.jpg" },
+      { id: 2, url: "/src/assets/freedommoment.jpg" },
+      { id: 3, url: "/src/assets/Madeon_djset.jpg" },
+      { id: 4, url: "/src/assets/Women_crowd.jpg" },
+      { id: 5, url: "/src/assets/Roof.jpg" },
+      { id: 6, url: "/src/assets/Dj.jpg" },
+      { id: 7, url: "/src/assets/Crowd.jpg" },
+      { id: 8, url: "/src/assets/corridor.jpg" },
+      { id: 9, url: "/src/assets/Mousse.jpg" },
+      { id: 10, url: "/src/assets/Man_crowd.jpg" },
+    ];
+    const images = ref(_images);
+    const handelDeleteImage = (index, number) => images.value.splice(index, 1);
+
+    return { handelDeleteImage, images };
+  },
 };
 </script>
