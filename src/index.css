@@ -4,7 +4,8 @@
 
 .outline {
     color: transparent;
-    -webkit-text-stroke: 1.5px #F9FAFB;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #F9FAFB;
 }
 
 

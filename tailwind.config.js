@@ -22,7 +22,7 @@ module.exports = {
         'shadow-card-bot': "linear-gradient(to top, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0) 100%)",
         'shadow-card-top': "linear-gradient(to bottom, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0) 100%)",
         'hero-bg': "url('/src/assets/antoine-j-ZiMtckU0rug-unsplash.jpg')",
-        'hero-bg-sec': "url('/src/assets/dave-netto-wWYwYiCoVwI-unsplash.jpg')",
+        'hero-bg-sec': "url('/src/assets/dave-netto-wWYwYiCoVwI-unsplash_2.jpg')",
       },
 
       "fontFamily": {
@@ -32,5 +32,7 @@ module.exports = {
     },
 
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
