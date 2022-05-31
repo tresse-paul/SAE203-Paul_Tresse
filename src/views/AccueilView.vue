@@ -21,14 +21,9 @@
           Laissez-vous emporter par les artistes <strong>les plus prometteurs</strong> venus des quatre coins du globe.
         </p>
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-          <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" image="../assets/Qrion.jpeg" date="Vendredi 5 août 2022" />
-          <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" image="../assets/Madeon.jpeg" date="Samedi 6 août 2022" />
-          <ArtisteCard
-            alt="Portrait de l'artiste Sarah Landry"
-            nom="Sarah Landry"
-            image="../assets/Sarah_Landry.jpeg"
-            date="Dimanche 7 août 2022"
-          />
+          <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" :image="imageQrion" date="Vendredi 5 août 2022" />
+          <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" :image="imageMadeon" date="Samedi 6 août 2022" />
+          <ArtisteCard alt="Portrait de l'artiste Sarah Landry" nom="Sarah Landry" :image="imageSarah_Landry" date="Dimanche 7 août 2022" />
         </div>
         <div class="flex justify-center">
           <RouterLink to="/artistes"><bouton principal>Voir plus</bouton></RouterLink>
@@ -74,8 +69,18 @@ import Pieds from "../components/Pieds.vue";
 import ArtisteCard from "../components/ArtisteCard.vue";
 import bouton from "../components/bouton.vue";
 import CarouselHome from "../components/CarouselHome.vue";
+import imageQrion from "../assets/Qrion.jpeg?url";
+import imageMadeon from "../assets/Madeon.jpeg?url";
+import imageSarah_Landry from "../assets/Sarah_Landry.jpeg?url";
 
 export default {
+  data: function () {
+    return {
+      imageQrion,
+      imageMadeon,
+      imageSarah_Landry,
+    };
+  },
   components: { Hero, Pieds, ArtisteCard, bouton, CarouselHome },
 };
 </script>
