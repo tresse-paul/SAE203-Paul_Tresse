@@ -13,19 +13,14 @@
           </h2>
         </div>
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-          <ArtisteCard alt="Portrait de l'artiste Peyruis" nom="Peyruis" image="/src/assets/Peyruis.webp" date="Dimanche 7 août 2022" />
-          <ArtisteCard
-            alt="Portrait de l'artiste Kryptogram"
-            nom="Kryptogram"
-            image="/src/assets/Kryptogram.jpeg"
-            date="Dimanche 7 août 2022"
-          />
-          <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" image="/src/assets/Qrion.jpeg" date="Dimanche 7 août 2022" />
-          <ArtisteCard alt="Portrait de l'artiste Avira" nom="Avira" image="/src/assets/Avira.jpeg" date="Dimanche 7 août 2022" />
+          <ArtisteCard alt="Portrait de l'artiste Peyruis" nom="Peyruis" :image="imagePeyruis" date="Dimanche 7 août 2022" />
+          <ArtisteCard alt="Portrait de l'artiste Kryptogram" nom="Kryptogram" :image="imageKryptogram" date="Dimanche 7 août 2022" />
+          <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" :image="imageQrion" date="Dimanche 7 août 2022" />
+          <ArtisteCard alt="Portrait de l'artiste Avira" nom="Avira" :image="imageAvira" date="Dimanche 7 août 2022" />
           <ArtisteCard
             alt="Portrait de l'artiste Speaker Honey"
             nom="Speaker Honey"
-            image="/src/assets/Speaker_Honey.jpeg"
+            :image="imageSpeaker_Honey"
             date="Dimanche 7 août 2022"
           />
         </div>
@@ -38,16 +33,11 @@
         </h2>
       </div>
       <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-        <ArtisteCard
-          alt="Portrait de l'artiste Paris blohm"
-          nom="Paris blohm"
-          image="/src/assets/Paris_Blohm.jpeg"
-          date="Dimanche 7 août 2022"
-        />
-        <ArtisteCard alt="Portrait de l'artiste Tom Swoon" nom="Tom Swoon" image="/src/assets/Tom_Swoon.jpeg" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" image="/src/assets/Madeon.jpeg" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Jai wolf" nom="Jai wolf" image="/src/assets/Jai_Wolf.jpeg" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Alesso" nom="Alesso" image="/src/assets/Alesso.jpeg" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Paris blohm" nom="Paris blohm" :image="imageParis_Blohm" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Tom Swoon" nom="Tom Swoon" :image="imageTom_Swoon" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" :image="imageMadeon" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Jai wolf" nom="Jai wolf" :image="imageJai_Wolf" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Alesso" nom="Alesso" :image="imageAlesso" date="Dimanche 7 août 2022" />
       </div>
     </div>
     <div class="mb-32 flex flex-col gap-7 px-5">
@@ -57,21 +47,11 @@
         </h2>
       </div>
       <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-        <ArtisteCard alt="Portrait de l'artiste Hypaton" nom="Hypaton" image="/src/assets/Hypaton.jpeg" date="Dimanche 7 août 2022" />
-        <ArtisteCard
-          alt="Portrait de l'artiste Steve Dekay"
-          nom="Steve Dekay"
-          image="/src/assets/Steve_Dekay.jpeg"
-          date="Dimanche 7 août 2022"
-        />
-        <ArtisteCard alt="Portrait de l'artiste Rinaly" nom="Rinaly" image="/src/assets/Rinaly.jpeg" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Kaspar" nom="Kaspar" image="/src/assets/Kaspar.jpeg" date="Dimanche 7 août 2022" />
-        <ArtisteCard
-          alt="Portrait de l'artiste Sarah Landry"
-          nom="Sarah Landry"
-          image="/src/assets/Sarah_Landry.jpeg"
-          date="Dimanche 7 août 2022"
-        />
+        <ArtisteCard alt="Portrait de l'artiste Hypaton" nom="Hypaton" :image="imageHypaton" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Steve Dekay" nom="Steve Dekay" :image="imageSteve_Dekay" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Rinaly" nom="Rinaly" :image="imageRinaly" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Kaspar" nom="Kaspar" :image="imageKaspar" date="Dimanche 7 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Sarah Landry" nom="Sarah Landry" :image="imageSarah_Landry" date="Dimanche 7 août 2022" />
       </div>
     </div>
   </div>
@@ -82,8 +62,42 @@
 import HeroSec from "../components/HeroSec.vue";
 import ArtisteCard from "../components/ArtisteCard.vue";
 import Pieds from "../components/Pieds.vue";
+import imagePeyruis from "../assets/Peyruis.webp?url";
+import imageKryptogram from "../assets/Kryptogram.jpeg?url";
+import imageQrion from "../assets/Qrion.jpeg?url";
+import imageAvira from "../assets/Avira.jpeg?url";
+import imageSpeaker_Honey from "../assets/Speaker_Honey.jpeg?url";
+import imageParis_Blohm from "../assets/Paris_Blohm.jpeg?url";
+import imageTom_Swoon from "../assets/Tom_Swoon.jpeg?url";
+import imageMadeon from "../assets/Madeon.jpeg?url";
+import imageJai_Wolf from "../assets/Jai_Wolf.jpeg?url";
+import imageAlesso from "../assets/Alesso.jpeg?url";
+import imageHypaton from "../assets/Hypaton.jpeg?url";
+import imageSteve_Dekay from "../assets/Steve_Dekay.jpeg?url";
+import imageRinaly from "../assets/Rinaly.jpeg?url";
+import imageKaspar from "../assets/Kaspar.jpeg?url";
+import imageSarah_Landry from "../assets/Sarah_Landry.jpeg?url";
 
 export default {
+  data: function () {
+    return {
+      imagePeyruis,
+      imageKryptogram,
+      imageQrion,
+      imageAvira,
+      imageSpeaker_Honey,
+      imageParis_Blohm,
+      imageTom_Swoon,
+      imageMadeon,
+      imageJai_Wolf,
+      imageAlesso,
+      imageHypaton,
+      imageSteve_Dekay,
+      imageRinaly,
+      imageKaspar,
+      imageSarah_Landry,
+    };
+  },
   components: { HeroSec, ArtisteCard, Pieds },
 };
 </script>
