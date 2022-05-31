@@ -7,12 +7,12 @@
         Laissez-vous emporter par les artistes <strong>les plus prometteurs</strong> venus des quatre coins du globe.
       </p>
       <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-        <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" image="/src/assets/Qrion.jpeg" date="Vendredi 5 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" image="/src/assets/Madeon.jpeg" date="Samedi 6 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" image="../assets/Qrion.jpeg" date="Vendredi 5 août 2022" />
+        <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" image="../assets/Madeon.jpeg" date="Samedi 6 août 2022" />
         <ArtisteCard
           alt="Portrait de l'artiste Sarah Landry"
           nom="Sarah Landry"
-          image="/src/assets/Sarah_Landry.jpeg"
+          image="../assets/Sarah_Landry.jpeg"
           date="Dimanche 7 août 2022"
         />
       </div>
