@@ -6,6 +6,8 @@ import FestivalView from '../views/FestivalView.vue'
 import ContactView from '../views/ContactView.vue'
 import LegaleView from '../views/LegaleView.vue'
 
+import PageNotFoundView from '../views/PageNotFoundView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,6 +17,8 @@ const router = createRouter({
     { path: '/festival', name: 'Festival', component: FestivalView },
     { path: '/contact', name: 'Contact', component: ContactView },
     { path: '/legale', name: 'Legale', component: LegaleView },
+
+    { path: '/:pathMatch(.*)*', name: 'PageNotFound', component: PageNotFoundView },
     // ici les autre routes
   ]
 })
