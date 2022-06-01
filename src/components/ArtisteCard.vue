@@ -1,5 +1,5 @@
 <template>
-  <figure class="group relative h-64 w-auto">
+  <figure class="relative group h-64 w-auto">
     <img :src="image" class="h-64 w-full rounded-lg object-cover" />
     <figcaption
       class="
@@ -24,7 +24,7 @@
         <p class="font-barlow text-xl text-gray-400">{{ date }}</p>
       </div>
       <div class="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 p-1.5">
-        <Eye />
+        <Eye class="fill-red-500" />
       </div>
     </figcaption>
   </figure>
