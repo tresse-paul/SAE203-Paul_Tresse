@@ -7,7 +7,9 @@
     </template>
 
     <template #addons>
-      <Navigation class="mx-10 bg-gray-50 bg-opacity-50 hover:h-10 hover:w-10 hover:bg-red-500" />
+      <Navigation
+        class="mx-10 bg-gray-50 bg-opacity-50 active:h-10 active:w-10 active:bg-red-500 xl:hover:h-10 xl:hover:w-10 xl:hover:bg-red-500"
+      />
     </template>
   </Carousel>
 </template>
