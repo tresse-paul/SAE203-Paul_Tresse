@@ -2,10 +2,13 @@
   <HeroSec>Les artistes</HeroSec>
   <div class="xl:px-32">
     <div class="mb-32 flex flex-col gap-20">
-      <p class="px-5 font-barlow text-gray-50 lg:text-xl">
-        Apprenez-en plus sur les artistes invité pour l’édition 2022 d’<strong>Electronic Palace Festival</strong>. Accédez à leurs
-        <strong>réseaux sociaux</strong> et à leur profil <strong>Spotify</strong> en seulement quelques clics.
-      </p>
+      <div class="flex justify-between gap-9 px-5">
+        <p class="font-barlow text-gray-50 lg:text-xl">
+          Apprenez-en plus sur les artistes invité pour l’édition 2022 d’<strong>Electronic Palace Festival</strong>. Accédez à leurs
+          <strong>réseaux sociaux</strong> et à leur profil <strong>Spotify</strong> en seulement quelques clics.
+        </p>
+        <DropDownMenu class="scale-100" />
+      </div>
       <div class="flex flex-col gap-7 px-5">
         <div class="flex justify-start">
           <h2 class="relative z-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">
@@ -62,6 +65,7 @@
 import HeroSec from "../components/HeroSec.vue";
 import ArtisteCard from "../components/ArtisteCard.vue";
 import Pieds from "../components/Pieds.vue";
+import DropDownMenu from "../components/DropDownMenu.vue";
 import imagePeyruis from "../assets/Peyruis.webp?url";
 import imageKryptogram from "../assets/Kryptogram.jpeg?url";
 import imageQrion from "../assets/Qrion.jpeg?url";
@@ -98,6 +102,6 @@ export default {
       imageSarah_Landry,
     };
   },
-  components: { HeroSec, ArtisteCard, Pieds },
+  components: { HeroSec, ArtisteCard, Pieds, DropDownMenu },
 };
 </script>
