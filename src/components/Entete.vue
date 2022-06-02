@@ -7,7 +7,7 @@
       </button>
     </div>
   </nav>
-  <ul :class="showMenu ? 'flex' : 'hidden'" class="xl:hiden my-4 flex flex-col items-end gap-5 px-5">
+  <ul :class="showMenu ? 'flex' : 'hidden'" class="my-4 flex flex-col items-end gap-5 px-5 xl:hidden">
     <li>
       <RouterLink to="/programmation" class="font-work-sans text-xl font-bold uppercase text-gray-50">Programmation</RouterLink>
     </li>

@@ -2,24 +2,6 @@
   <HeroSec>Programmation</HeroSec>
   <div class="xl:px-32">
     <div class="mb-32 flex flex-col gap-7">
-      <div>
-        <p class="text-gray-50">Liste des genres - simple listes</p>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th class="text-gray-50" scope="col">Id</th>
-            <th class="text-gray-50" scope="col">Nom</th>
-            <th class="text-gray-50" scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="genre in listeGenre" :key="genre.id">
-            <td class="text-gray-50">{{ genre.id }}</td>
-            <td class="text-gray-50">{{ genre.nom }}</td>
-          </tr>
-        </tbody>
-      </table>
       <div class="flex justify-start px-5">
         <h2 class="relative z-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">
           House music<span class="absolute -left-0 bottom-1 -z-10 h-2.5 w-full bg-red-500"></span>
@@ -84,47 +66,11 @@
 </template>
 
 <script>
-import {
-  getFirestore,
-  collection,
-  doc,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  onSnapshot,
-} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js";
-
 import ConcertCard from "../components/ConcertCard.vue";
 import HeroSec from "../components/HeroSec.vue";
 import Pieds from "../components/Pieds.vue";
 
 export default {
-  data() {
-    return {
-      listeGenre: [],
-    };
-  },
-
-  mounted() {
-    this.getGenre();
-  },
-
-  methods: {
-    async getGenre() {
-      const firestore = getFirestore();
-      const dbGenre = collection(firestore, "genre");
-      const query = await getDocs(dbGenre);
-      query.forEach((doc) => {
-        let genre = {
-          id: doc.id,
-          nom: doc.data().nom,
-        };
-        this.listeGenre.push(genre);
-      });
-    },
-  },
-
   components: { ConcertCard, HeroSec, Pieds },
 };
 </script>

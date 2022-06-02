@@ -7,6 +7,8 @@ import ContactView from '../views/ContactView.vue'
 import LegaleView from '../views/LegaleView.vue'
 import MonCompteView from '../views/MonCompteView.vue'
 
+import CreateParticipant from '../views/participant/CreateView.vue'
+
 import PageNotFoundView from '../views/PageNotFoundView.vue'
 
 const router = createRouter({
@@ -19,6 +21,8 @@ const router = createRouter({
     { path: '/contact', name: 'Contact', component: ContactView },
     { path: '/legale', name: 'Legale', component: LegaleView },
     { path: '/compte', name: 'MonCompte', component: MonCompteView },
+
+    { path: '/createParticipant', name: 'CreateParticipant', component: CreateParticipant },
 
     { path: '/:pathMatch(.*)*', name: 'PageNotFound', component: PageNotFoundView },
     // ici les autre routes
