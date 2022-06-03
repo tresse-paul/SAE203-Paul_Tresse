@@ -1,28 +1,35 @@
 <template>
   <HeroSec>Connexion</HeroSec>
-  <div class="mb-32 flex flex-col gap-20 px-5 xl:px-32">
-    <h2 class="text-4xl font-bold text-gray-50">Se connecter</h2>
-    <form @submit.prevent="onCnx()" class="flex max-w-lg flex-col gap-8">
-      <div class="flex flex-initial flex-col justify-center gap-2 font-barlow">
-        <p class="text-xl text-gray-50">Email</p>
-        <input
-          v-model="user.email"
-          class="rounded-lg bg-gray-50 text-gray-1000 focus:ring-red-500"
-          type="text"
-          required
-          placeholder="abcd@mail.com"
-        />
-      </div>
-      <div class="flex flex-initial flex-col justify-center gap-2 font-barlow">
-        <p class="text-xl text-gray-50">Mot de passe</p>
-        <input v-model="user.password" class="flex-auto rounded-lg bg-gray-50 text-gray-1000 focus:ring-red-500" type="password" required />
-      </div>
-      <div role="alert" class="bg-red-300 p-3 text-center text-sm text-gray-1000">{{ message }}</div>
-      <div class="flex justify-between">
-        <button class="rounded-lg bg-gray-50 py-2 px-4 text-xl text-gray-1000" type="submit">Connexion</button>
-        <button class="rounded-lg bg-red-500 py-2 px-4 text-xl text-gray-50" @click="onDcnx()">Deconnexion</button>
-      </div>
-    </form>
+  <div class="mb-32 flex w-screen items-center gap-52 px-5 xl:px-32">
+    <div class="flex flex-col gap-20">
+      <h2 class="text-4xl font-bold text-gray-50">Se connecter</h2>
+      <form @submit.prevent="onCnx" class="flex max-w-lg flex-col gap-8">
+        <div class="flex flex-initial flex-col justify-center gap-2 font-barlow">
+          <p class="text-xl text-gray-50">Email</p>
+          <input
+            v-model="user.email"
+            class="rounded-lg bg-gray-50 text-gray-1000 focus:ring-red-500"
+            type="email"
+            required
+            placeholder="abcd@mail.com"
+          />
+        </div>
+        <div class="flex flex-initial flex-col justify-center gap-2 font-barlow">
+          <p class="text-xl text-gray-50">Mot de passe</p>
+          <input v-model="user.password" class="flex-auto rounded-lg bg-gray-50 text-gray-1000 focus:ring-red-500" :type="type" required />
+        </div>
+        <div role="alert" class="bg-red-300 p-3 text-center text-sm text-gray-1000">{{ message }}</div>
+        <div class="flex justify-between gap-10">
+          <button class="flex-auto rounded-lg bg-gray-50 py-2 px-4 text-xl text-gray-1000" type="submit">Connexion</button>
+          <button class="flex-auto rounded-lg bg-red-500 py-2 px-4 text-xl text-gray-50" @click="onDcnx()">Deconnexion</button>
+        </div>
+      </form>
+    </div>
+    <div class="flex">
+      <button class="flex h-10 items-center justify-center rounded-lg bg-gray-50 px-4 py-2 font-barlow text-lg text-gray-1000">
+        <RouterLink to="/participant">Gérer les participants</RouterLink>
+      </button>
+    </div>
   </div>
   <Pieds />
 </template>
@@ -36,7 +43,9 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+
+import { emitter } from "../main.js";
 
 export default {
   data() {
@@ -46,6 +55,9 @@ export default {
         paswword: "",
       },
       message: null,
+      view: false,
+      type: "password",
+      imageData: null,
     };
   },
 
@@ -63,8 +75,8 @@ export default {
     onCnx() {
       signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
         .then((response) => {
-          console.log("user connecté", response.user);
           this.user = response.user;
+          emitter.emit("connectUser", { user: this.user });
           this.message = "User connecté : " + this.user.email;
         })
         .catch((error) => {
@@ -76,17 +88,25 @@ export default {
     onDcnx() {
       signOut(getAuth())
         .then((response) => {
-          this.user = getAuth().currentUser;
+          this.message = "User non connecté";
           this.user = {
             email: null,
             paswword: null,
           };
-          console.log("User deconnecté", this.user);
-          this.message = "user deconnecté";
+          emitter.emit("deConnectUser", { user: this.user });
         })
         .catch((error) => {
           console.log("erreur déconnexion", error);
         });
+    },
+
+    affiche() {
+      this.view = !this.view;
+      if (this.view) {
+        this.type = "text";
+      } else {
+        this.type = "password";
+      }
     },
   },
 

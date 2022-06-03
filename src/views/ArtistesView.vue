@@ -7,54 +7,25 @@
           Apprenez-en plus sur les artistes invité pour l’édition 2022 d’<strong>Electronic Palace Festival</strong>. Accédez à leurs
           <strong>réseaux sociaux</strong> et à leur profil <strong>Spotify</strong> en seulement quelques clics.
         </p>
-        <DropDownMenu class="scale-100" />
       </div>
-      <div class="flex flex-col gap-7 px-5">
-        <div class="flex justify-start">
-          <h2 class="relative z-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">
-            House music<span class="absolute -left-0 bottom-1 -z-10 h-2.5 w-full bg-red-500"></span>
+      <div class="flex flex-col gap-32 px-5">
+        <div v-for="[genre, listeGenre] in participantParGenre" :key="genre" class="flex flex-col gap-7">
+          <h2 class="relative mb-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">
+            {{ genre }}<span class="absolute left-0 bottom-0 -z-10 h-2.5 w-full bg-red-500"></span>
           </h2>
+          <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
+            <ArtisteCard
+              v-for="artiste in listeGenre"
+              :key="artiste.id"
+              :alt="`Portrait de l'artiste ${artiste.nom}.`"
+              :nom="artiste.nom"
+              :image="artiste.photo"
+              :date="artiste.dateConcert"
+              :heure="artiste.heureDebut"
+              :id="artiste.id"
+            />
+          </div>
         </div>
-        <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-          <ArtisteCard alt="Portrait de l'artiste Peyruis" nom="Peyruis" :image="imagePeyruis" date="Dimanche 7 août 2022" />
-          <ArtisteCard alt="Portrait de l'artiste Kryptogram" nom="Kryptogram" :image="imageKryptogram" date="Dimanche 7 août 2022" />
-          <ArtisteCard alt="Portrait de l'artiste Qrion" nom="Qrion" :image="imageQrion" date="Dimanche 7 août 2022" />
-          <ArtisteCard alt="Portrait de l'artiste Avira" nom="Avira" :image="imageAvira" date="Dimanche 7 août 2022" />
-          <ArtisteCard
-            alt="Portrait de l'artiste Speaker Honey"
-            nom="Speaker Honey"
-            :image="imageSpeaker_Honey"
-            date="Dimanche 7 août 2022"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="mb-32 flex flex-col gap-7 px-5">
-      <div class="flex justify-start">
-        <h2 class="relative z-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">
-          EDM<span class="absolute -left-0 bottom-1 -z-10 h-2.5 w-full bg-red-500"></span>
-        </h2>
-      </div>
-      <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-        <ArtisteCard alt="Portrait de l'artiste Paris blohm" nom="Paris blohm" :image="imageParis_Blohm" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Tom Swoon" nom="Tom Swoon" :image="imageTom_Swoon" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Madeon" nom="Madeon" :image="imageMadeon" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Jai wolf" nom="Jai wolf" :image="imageJai_Wolf" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Alesso" nom="Alesso" :image="imageAlesso" date="Dimanche 7 août 2022" />
-      </div>
-    </div>
-    <div class="mb-32 flex flex-col gap-7 px-5">
-      <div class="flex justify-start">
-        <h2 class="relative z-10 font-work-sans text-3xl font-bold uppercase text-gray-50 lg:text-5xl">
-          Trance music<span class="absolute -left-0 bottom-1 -z-10 h-2.5 w-full bg-red-500"></span>
-        </h2>
-      </div>
-      <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-10">
-        <ArtisteCard alt="Portrait de l'artiste Hypaton" nom="Hypaton" :image="imageHypaton" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Steve Dekay" nom="Steve Dekay" :image="imageSteve_Dekay" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Rinaly" nom="Rinaly" :image="imageRinaly" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Kaspar" nom="Kaspar" :image="imageKaspar" date="Dimanche 7 août 2022" />
-        <ArtisteCard alt="Portrait de l'artiste Sarah Landry" nom="Sarah Landry" :image="imageSarah_Landry" date="Dimanche 7 août 2022" />
       </div>
     </div>
   </div>
@@ -65,43 +36,106 @@
 import HeroSec from "../components/HeroSec.vue";
 import ArtisteCard from "../components/ArtisteCard.vue";
 import Pieds from "../components/Pieds.vue";
-import DropDownMenu from "../components/DropDownMenu.vue";
-import imagePeyruis from "../assets/Peyruis.webp?url";
-import imageKryptogram from "../assets/Kryptogram.jpeg?url";
-import imageQrion from "../assets/Qrion.jpeg?url";
-import imageAvira from "../assets/Avira.jpeg?url";
-import imageSpeaker_Honey from "../assets/Speaker_Honey.jpeg?url";
-import imageParis_Blohm from "../assets/Paris_Blohm.jpeg?url";
-import imageTom_Swoon from "../assets/Tom_Swoon.jpeg?url";
-import imageMadeon from "../assets/Madeon.jpeg?url";
-import imageJai_Wolf from "../assets/Jai_Wolf.jpeg?url";
-import imageAlesso from "../assets/Alesso.jpeg?url";
-import imageHypaton from "../assets/Hypaton.jpeg?url";
-import imageSteve_Dekay from "../assets/Steve_Dekay.jpeg?url";
-import imageRinaly from "../assets/Rinaly.jpeg?url";
-import imageKaspar from "../assets/Kaspar.jpeg?url";
-import imageSarah_Landry from "../assets/Sarah_Landry.jpeg?url";
+import { groupBy } from "lodash";
+
+// Bibliothèque Firestore : import des fonctions
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
   data: function () {
     return {
-      imagePeyruis,
-      imageKryptogram,
-      imageQrion,
-      imageAvira,
-      imageSpeaker_Honey,
-      imageParis_Blohm,
-      imageTom_Swoon,
-      imageMadeon,
-      imageJai_Wolf,
-      imageAlesso,
-      imageHypaton,
-      imageSteve_Dekay,
-      imageRinaly,
-      imageKaspar,
-      imageSarah_Landry,
+      listeParticipant: [], // Liste des participants
+      listeGenre: [], //Liste des genres de musiques
     };
   },
-  components: { HeroSec, ArtisteCard, Pieds, DropDownMenu },
+
+  props: {
+    genre: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    participantParGenre() {
+      let data = groupBy(this.listeParticipant, "genre");
+      //debugger;
+      console.log(data);
+      return Object.entries(data).sort((a, b) => {
+        if (a[0] === "House music") return -1;
+        if (b[0] === "House music") return 1;
+        if (a[0] === "Trance music") return 1;
+        if (b[0] === "Trance music") return -1;
+        return 0;
+      });
+    },
+  },
+
+  mounted() {
+    // Montage de la vue
+    // Appel de la liste des participants
+    // Appel de la liste des Genre
+    this.getParticipants();
+    this.getGenre();
+  },
+  methods: {
+    async getParticipants() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document participant
+      const dbPart = collection(firestore, "participant");
+      // Liste des participants triés sur leur nom
+      const q = query(dbPart, orderBy("genre", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listeParticipant = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        // Récupération des images de chaque participant
+        // parcours de la liste
+        this.listeParticipant.forEach(function (personne) {
+          // Obtenir le Cloud Storage
+          const storage = getStorage();
+          // Récupération de l'image par son nom de fichier
+          const spaceRef = ref(storage, "participant/" + personne.photo);
+          // Récupération de l'url complète de l'image
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              // On remplace le nom du fichier
+              // Par l'url complète de la photo
+              personne.photo = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+
+    async getGenre() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document Genre
+      const dbGenre = collection(firestore, "Genre");
+      // Liste des genres triés sur leur libelle
+      const q = query(dbGenre, orderBy("libelle", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listeGenre = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        // Récupération des images de chaque participant
+        // parcours de la liste
+        this.listeGenre.forEach(function (genre) {});
+      });
+    },
+  },
+  components: { HeroSec, ArtisteCard, Pieds },
 };
 </script>
